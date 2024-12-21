@@ -2,24 +2,24 @@
 
 {% block content %}
 
-  <p>Topic: {{ topic.text }}</p>
+  <p>主题: {{ topic.text }}</p>
   
-  <p>Entries:</p>
+  <p>条目:</p>
   <p>
-    <a href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
+    <a href="{% url 'learning_logs:new_entry' topic.id %}">添加新条目</a>
   </p>
 
   <ul>
     {% for entry in entries %}
     <li>
-      <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+      <p>{{ entry.date_added|date:'Y-m-d H:i' }}</p>
       <p>{{ entry.text|linebreaks }}</p>
       <p>
         <a href="{% url 'learning_logs:edit_entry' entry.id %}">
-        Edit entry</a></p>
+        编辑条目</a></p>
     </li>
   {% empty %}
-    <li>There are no entries for this topic yet.</li>
+    <li>此主题还没有任何条目。</li>
   {% endfor %}
 </ul>
 
