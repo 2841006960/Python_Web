@@ -3,7 +3,7 @@ from .models import Topic
 from .forms import TopicForm
 from .forms import TopicForm, EntryForm
 from .models import Topic, Entry
-
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
@@ -12,7 +12,7 @@ def index(request):
 
 
 
-
+@login_required
 def topics(request):
     """显示所有的主题"""
     topics = Topic.objects.order_by('date_added')
