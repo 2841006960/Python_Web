@@ -1,5 +1,14 @@
 {% extends 'learning_logs/base.html' %}
 
-{% block content %}
-    <p>学习笔记帮助您跟踪任何感兴趣主题的学习进度。</p>
-{% endblock content %}
+{% block page_header %}
+    <div class="p-3 mb-4 bg-light border rounded-3">
+        <div class="container-fluid py-4">
+            <h1 class="display-3">记录你的学习</h1>
+
+            <p class="lead">创建你自己的学习日志，并列出你正在学习的主题。每当你对某个主题有了新的了解时，写一篇总结你所学内容的条目。</p>
+
+            <a class="btn btn-primary btn-lg mt-1" href="{% url 'accounts:register' %}">注册 &raquo;</a>
+        </div>
+    </div>
+{% endblock page_header %}
+
