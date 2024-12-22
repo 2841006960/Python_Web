@@ -1,0 +1,14 @@
+# 忽略Python编译生成的缓存文件
+learning_log/learning_logs/__pycache__
+
+# 忽略虚拟环境目录
+learning_log/ll_env/
+
+# 忽略所有 .pyc 文件
+*.pyc
+
+# 忽略日志文件
+*.log
+
+# 忽略SQLite数据库文件
+*.sqlite3
