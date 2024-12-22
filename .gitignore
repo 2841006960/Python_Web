@@ -1,6 +1,6 @@
 # 忽略Python编译生成的缓存文件
 learning_log/learning_logs/__pycache__
-
+learning_log/ll_project/__pycache__
 # 忽略虚拟环境目录
 learning_log/ll_env/
 
